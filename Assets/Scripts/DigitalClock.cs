@@ -1,18 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DigitalClock : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private TextMeshPro timeText;
+
+    private void Start()
     {
-        
+        StartCoroutine(UpdateClockCoroutine());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator UpdateClockCoroutine()
     {
-        
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+
+            timeText.text = DateTime.Now.ToString("hh:mm:ss");
+        }
     }
+    
+
 }
