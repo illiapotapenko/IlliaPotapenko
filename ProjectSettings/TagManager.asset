@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Flame
+  - Projectile
+  - Destroyer
+  - MiniWorldCamera
+  - Water
   layers:
   - Default
   - TransparentFX
@@ -34,9 +39,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - characterCollider
+  - characterController
+  - pushable
   m_SortingLayers:
   - name: Default
     uniqueID: 0
