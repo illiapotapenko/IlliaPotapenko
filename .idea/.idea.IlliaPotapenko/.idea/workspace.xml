@@ -7,6 +7,7 @@
     <list default="true" id="f3ca2636-2efa-41c6-bc81-5a010f80efc9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IlliaPotapenko/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IlliaPotapenko/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +88,8 @@
       <updated>1738424806038</updated>
       <workItem from="1738424807395" duration="13000" />
       <workItem from="1738427869391" duration="875000" />
-      <workItem from="1739028911358" duration="2981000" />
+      <workItem from="1739028911358" duration="4169000" />
+      <workItem from="1740237922588" duration="1578000" />
     </task>
     <servers />
   </component>
