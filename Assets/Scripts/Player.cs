@@ -6,6 +6,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance { get; private set; }
+    public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
+
+    public class OnSelectedCounterChangedEventArgs : EventArgs
+    {
+        public ClearCounter selectedCounter;
+    }
+
     [SerializeField] private float moveSpeed;
     [SerializeField] private float turnSpeed;
     [SerializeField] private GameInput _gameInput;
@@ -13,6 +21,13 @@ public class Player : MonoBehaviour
     
     private bool isWalking;
     private Vector3 lastInteractDirection;
+    private ClearCounter _selectedCounter;
+
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -21,21 +36,9 @@ public class Player : MonoBehaviour
 
     private void GameInputOnInteractAction()
     {
-        Vector2 inputVector = _gameInput.GetMovementVector();
-        Vector3 moveDirection = new Vector3(inputVector.x, 0, inputVector.y);
-
-        if (moveDirection != Vector3.zero)
+        if (_selectedCounter != null)
         {
-            lastInteractDirection = moveDirection;
-        }
-
-        float interactDistance = 2.0f;
-        if ( Physics.Raycast(transform.position, lastInteractDirection, out RaycastHit raycastHit, interactDistance,counterLayerMask))
-        {
-            if (raycastHit.transform.TryGetComponent(out ClearCounter clearCounter))
-            {
-                clearCounter.Interact();
-            }
+            _selectedCounter.Interact();
         }
     }
 
@@ -65,10 +68,20 @@ public class Player : MonoBehaviour
         {
             if (raycastHit.transform.TryGetComponent(out ClearCounter clearCounter))
             {
-              
+                if (clearCounter != _selectedCounter)
+                {
+                   SetSelectedCounter(clearCounter);
+                }
+            }
+            else
+            {
+                SetSelectedCounter(null);
             }
         }
-       
+        else
+        {
+           SetSelectedCounter(null);
+        }
     }
     private void HandleMovement()
     {
@@ -111,5 +124,15 @@ public class Player : MonoBehaviour
         
         transform.forward = Vector3.Slerp(transform.forward,moveDirection,Time.deltaTime * turnSpeed);
         
+    }
+
+    private void SetSelectedCounter(ClearCounter selectedCounter)
+    {
+        _selectedCounter = selectedCounter;
+                    
+        OnSelectedCounterChanged?.Invoke(this, new OnSelectedCounterChangedEventArgs
+        {
+            selectedCounter = _selectedCounter
+        });
     }
 }
