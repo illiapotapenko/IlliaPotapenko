@@ -403,6 +403,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3969534498086023180, guid: db83b3505961a1846bfb295cd4cec7cf, type: 3}
+      propertyPath: tomatoPrefab
+      value: 
+      objectReference: {fileID: 322950976174732192, guid: 822a4c54e51cb094686772c1958c866d, type: 3}
+    - target: {fileID: 3969534498086023180, guid: db83b3505961a1846bfb295cd4cec7cf, type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 9242c8d86df83e240b208ae3f3495670, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db83b3505961a1846bfb295cd4cec7cf, type: 3}
 --- !u!1 &1016552932
@@ -802,5 +810,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3969534498086023180, guid: db83b3505961a1846bfb295cd4cec7cf, type: 3}
+      propertyPath: kitchenObjectSO
+      value: 
+      objectReference: {fileID: 11400000, guid: b2794943b4ca4714098cd0e6e2b55aaa, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db83b3505961a1846bfb295cd4cec7cf, type: 3}
