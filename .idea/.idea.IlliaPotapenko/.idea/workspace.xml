@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f3ca2636-2efa-41c6-bc81-5a010f80efc9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IlliaPotapenko/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IlliaPotapenko/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ClearCounter.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ClearCounter.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Counters/ClearCounter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Counters/ClearCounter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/KitchenObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/KitchenObject.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +100,8 @@
       <workItem from="1742051956847" duration="3355000" />
       <workItem from="1742658198537" duration="2070000" />
       <workItem from="1743261629453" duration="4766000" />
-      <workItem from="1743862772135" duration="3110000" />
+      <workItem from="1743862772135" duration="3893000" />
+      <workItem from="1744469010872" duration="2604000" />
     </task>
     <servers />
   </component>
