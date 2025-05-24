@@ -13,6 +13,11 @@ public class BaseCounter : MonoBehaviour, IKitchenObjectParent
     Debug.LogError("BaseCounter cannot be interacted");
   }
 
+  public virtual void InteractAlternate(Player player)
+  {
+    Debug.LogError("BaseCounter cannot be alternate interacted");
+  }
+
   public Transform GetKitchenObjectFollowTransform()
   {
     return counterTopPoint; 
